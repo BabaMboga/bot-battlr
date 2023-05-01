@@ -12,6 +12,7 @@ function BotCollection({ bots, addBotToArmy }) {
         <BotCard
           key={bot.id}
           bot={bot}
+          addToArmy={addBotToArmy}
           handleClick={handleClick}
           buttonText="Enlist"
         />

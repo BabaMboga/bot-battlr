@@ -22,7 +22,7 @@ function BotCard({ bot, addToArmy, removeFromArmy, deleteBot }) {
   };
   return (
     <Card>
-      <image src={avatar_url} wrapped ui={false} />
+      <Image src={avatar_url} wrapped ui={false} />
       <Card.Content>
         <Card.Header>{name}</Card.Header>
         <Card.Meta>
