@@ -42,7 +42,7 @@ function App() {
       <YourBotArmy
         army={army}
         removeBotFromArmy={removeBotFromArmy}
-        dischargeBot={dischargeBot}
+        deleteBot={dischargeBot}
       />
     </div>
   );
