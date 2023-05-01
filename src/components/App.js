@@ -11,7 +11,17 @@ function App() {
             .then(response => response.json())
             .then(bots => setBots(bots));
     }, []);
-    
+
+    const addBotToArmy = bot => {
+        if (!army.includes(bot)){
+            setArmy([...army, bot]);
+        }
+    };
+
+    const removeBotArmy = bot => {
+        setArmy(army.filter(b => b !== bot));
+    };
+
   return (
     <div>App</div>
   )
