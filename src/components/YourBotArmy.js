@@ -10,8 +10,21 @@ function YourBotArmy({army, removeBotFromArmy, dischargeBot}) {
         dischargeBot(bot);
     }
   return (
-    <div>YourBotArmy</div>
-  )
+    <div className='your-bot-army'>
+        {army.length > 0 ? (
+            army.map(bot => (
+                <BotCard 
+                key={bot.id}
+                bot={bot}
+                handleClick={handleRemoveClick}
+                handleDischargeClick={handleDischargeClick}
+                />
+            ))
+        ) : (
+            <p> You haven't enlisted any bots yet.</p>
+        )}
+    </div>
+  );
 }
 
-export default YourBotArmy
+export default YourBotArmy;
