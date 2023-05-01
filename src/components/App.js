@@ -36,8 +36,12 @@ function App() {
     };
 
   return (
-    <div>App</div>
-  )
+    <div className="App">
+        <h1>Bot Army</h1>
+        <BotCollection bots={bots} addBotToArmy={addBotToArmy} />
+        <YourBotArmy army={army} removedBotFromArmy={removeBotArmy} dischargeBot={dischargeBot} />
+    </div>
+  );
 }
 
 export default App
