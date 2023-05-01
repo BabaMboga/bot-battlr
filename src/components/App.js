@@ -18,7 +18,7 @@ function App() {
     }
   };
 
-  const removeBotArmy = (bot) => {
+  const removeBotFromArmy = (bot) => {
     setArmy(army.filter((b) => b !== bot));
   };
 
@@ -41,7 +41,7 @@ function App() {
       <BotCollection bots={bots} addBotToArmy={addBotToArmy} />
       <YourBotArmy
         army={army}
-        removedBotFromArmy={removeBotArmy}
+        removeBotFromArmy={removeBotFromArmy}
         dischargeBot={dischargeBot}
       />
     </div>

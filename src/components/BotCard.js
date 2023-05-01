@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button, Icon, Image } from "semantic-ui-react";
+
 
 function BotCard({ bot, addToArmy, removeFromArmy, deleteBot }) {
   const {
@@ -21,50 +21,35 @@ function BotCard({ bot, addToArmy, removeFromArmy, deleteBot }) {
     }
   };
   return (
-    <Card>
-      <Image src={avatar_url} wrapped ui={false} />
-      <Card.Content>
-        <Card.Header>{name}</Card.Header>
-        <Card.Meta>
-          <span className="date">{bot_class}</span>
-        </Card.Meta>
-        <Card.Description>{catchphrase}</Card.Description>
-      </Card.Content>
-      <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          {health}HP
-        </a>
-        <br />
-        <a>
-          <Icon name="shield alternate" />
-          {armor} Armor
-        </a>
-        <br />
-        <a>
-          <Icon name="lightning" />
-          {damage} Damage
-        </a>
-        <br />
+    <div className="bot-card">
+        <img src={avatar_url} alt={name} />
+        <h2>{name}</h2>
+        <p>Class: {bot_class}</p> 
+        <p>CatchPhrase: {catchphrase}</p>
+        <p>Health: {health}</p>
+        <p>Damage: {damage}</p>
+        <p>Armor: {armor}</p>
         <div className="ui two buttons">
-          {addToArmy && (
-            <Button basic color="green" onClick={handleClick}>
-              Add to Army
-            </Button>
-          )}
-          {!addToArmy && (
-            <Button basic color="red" onClick={handleClick}>
-              Remove from Army
-            </Button>
-          )}
-          {deleteBot && (
-            <Button basic color="red" onClick={deleteBot(id)}>
-              Delete Bot
-            </Button>
-          )}
-        </div>
-      </Card.Content>
-    </Card>
+        {addToArmy && (
+          <button basic color="green" onClick={handleClick}>
+            Add to Army
+          </button>
+        )}
+        {!addToArmy && (
+          <button basic color="red" onClick={handleClick}>
+            Remove from Army
+          </button>
+        )}
+        {deleteBot && (
+          <button basic color="red" onClick={deleteBot(id)}>
+            Delete Bot
+          </button>
+        )}
+      </div>
+    
+  
+  </div>
+      
   );
 }
 
