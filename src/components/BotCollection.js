@@ -2,9 +2,7 @@ import React from "react";
 import BotCard from "./BotCard";
 
 function BotCollection({ bots, addToArmy }) {
-  const handleClick = (bot) => {
-    addToArmy(bot);
-  };
+  
 
   return (
     <div className="bot-collection">

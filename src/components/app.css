@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.bot-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.bot-collection:after {
+  content: "";
+  flex: auto;
+}
+
+.bot-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  width: 400px;
+}
+
+.bot-card img {
+  border-radius: 5px;
+  height: 150px;
+  width: 150px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.bot-card h2 {
+  font-size:  1.5rem;
+  margin-top: 0.5rem;
+}
+
+.bot-card p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.your-bot-army {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.your-bot-army p {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.ui.two.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 5px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+button.basic {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+}
+
+button.green {
+  background-color: #21ba45;
+  color: #fff;
+}
+
+button.red {
+  background-color: #db2828;
+  color: #fff;
+}
