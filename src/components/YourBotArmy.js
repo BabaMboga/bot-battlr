@@ -16,7 +16,7 @@ function YourBotArmy({ army, removeBotFromArmy, dischargeBot }) {
           <BotCard
             key={bot.id}
             bot={bot}
-            removeFromArmy={removeFromArmy}
+            removeFromArmy={removeBotFromArmy}
             handleClick={handleRemoveClick}
             deleteBot={handleDischargeClick}
           />

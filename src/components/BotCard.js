@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function BotCard({ bot, addToArmy, handleClick, deleteBot }) {
+function BotCard({ bot, addToArmy, removeFromArmy, deleteBot }) {
   const {
     id,
     name,
@@ -31,7 +31,7 @@ function BotCard({ bot, addToArmy, handleClick, deleteBot }) {
         <p>Armor: {armor}</p>
         <div className="ui two buttons">
         {addToArmy && (
-          <button basic color="green" onClick={addToArmy}>
+          <button basic color="green" onClick={() => addToArmy(bot)}>
             Add to Army
           </button>
         )}
