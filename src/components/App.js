@@ -8,7 +8,7 @@ function App() {
   const [army, setArmy] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.jsonserve.com/SK4eYu")
+    fetch("https://bots-database.onrender.com/bots")
       .then((response) => response.json())
       .then((bots) => setBots(bots));
   }, []);
@@ -24,7 +24,7 @@ function App() {
   };
 
   const dischargeBot = (bot) => {
-    fetch(`http://localhost:3000/bots/${bot.id}`, {
+    fetch(`https://bots-database.onrender.com/bots/${bot.id}`, {
       method: "DELETE",
     })
       .then(() => {
