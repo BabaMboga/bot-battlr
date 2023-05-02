@@ -24,7 +24,7 @@ function App() {
   };
 
   const dischargeBot = (bot) => {
-    fetch(`http://localhost:3000/bots/${bot.id}`, {
+    fetch(`https://api.jsonbin.io/v3/b/645065849d312622a355b45b/${bot.id}`, {
       method: "DELETE",
     })
       .then(() => {
