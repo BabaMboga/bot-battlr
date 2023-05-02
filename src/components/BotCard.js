@@ -14,10 +14,12 @@ function BotCard({ bot, addToArmy, removeFromArmy, deleteBot }) {
   } = bot;
 
   const handleClick = () => {
-    if (!addToArmy) {
-      removeFromArmy(id);
-    } else {
+    if (addToArmy) {
       addToArmy(bot);
+    } else if(removeFromArmy) {
+      removeFromArmy(bot);
+    } else if(deleteBot){
+        deleteBot(bot);
     }
   };
   return (
@@ -31,17 +33,17 @@ function BotCard({ bot, addToArmy, removeFromArmy, deleteBot }) {
         <p>Armor: {armor}</p>
         <div className="ui two buttons">
         {addToArmy && (
-          <button basic color="green" onClick={() => addToArmy(bot)}>
+          <button basic color="green" onClick={handleClick}>
             Add to Army
           </button>
         )}
-        {!addToArmy && (
+        {removeFromArmy && (
           <button basic color="red" onClick={handleClick}>
             Remove from Army
           </button>
         )}
         {deleteBot && (
-          <button basic color="red" onClick={() => deleteBot(id)}>
+          <button basic color="red" onClick={handleClick}>
             Delete Bot
           </button>
         )}

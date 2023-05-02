@@ -1,9 +1,9 @@
 import React from "react";
 import BotCard from "./BotCard";
 
-function BotCollection({ bots, addBotToArmy }) {
+function BotCollection({ bots, addToArmy }) {
   const handleClick = (bot) => {
-    addBotToArmy(bot);
+    addToArmy(bot);
   };
 
   return (
@@ -12,8 +12,7 @@ function BotCollection({ bots, addBotToArmy }) {
         <BotCard
           key={bot.id}
           bot={bot}
-          addToArmy={addBotToArmy}
-          handleClick={handleClick}
+          addToArmy={addToArmy}
           buttonText="Enlist"
         />
       ))}

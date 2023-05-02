@@ -1,14 +1,9 @@
 import React from "react";
 import BotCard from "./BotCard";
 
-function YourBotArmy({ army, removeBotFromArmy, dischargeBot }) {
-  const handleRemoveClick = (bot) => {
-    removeBotFromArmy(bot);
-  };
-
-  const handleDischargeClick = (bot) => {
-    dischargeBot(bot);
-  };
+function YourBotArmy({ army, removeFromArmy, dischargeBot }) {
+  
+  
   return (
     <div className="your-bot-army">
       {army.length > 0 ? (
@@ -16,9 +11,8 @@ function YourBotArmy({ army, removeBotFromArmy, dischargeBot }) {
           <BotCard
             key={bot.id}
             bot={bot}
-            removeFromArmy={removeBotFromArmy}
-            handleClick={handleRemoveClick}
-            deleteBot={handleDischargeClick}
+            removeFromArmy={removeFromArmy}
+            deleteBot={dischargeBot}
           />
         ))
       ) : (

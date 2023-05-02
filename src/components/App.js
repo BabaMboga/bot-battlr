@@ -12,13 +12,13 @@ function App() {
       .then((bots) => setBots(bots));
   }, []);
 
-  const addBotToArmy = (bot) => {
+  const addToArmy = (bot) => {
     if (!army.includes(bot)) {
       setArmy([...army, bot]);
     }
   };
 
-  const removeBotFromArmy = (bot) => {
+  const removeFromArmy = (bot) => {
     setArmy(army.filter((b) => b !== bot));
   };
 
@@ -38,11 +38,11 @@ function App() {
   return (
     <div className="App">
       <h1>Bot Army</h1>
-      <BotCollection bots={bots} addBotToArmy={addBotToArmy} />
+      <BotCollection bots={bots} addToArmy={addToArmy} />
       <YourBotArmy
         army={army}
-        removeBotFromArmy={removeBotFromArmy}
-        deleteBot={dischargeBot}
+        removeFromArmy={removeFromArmy}
+        dischargeBot={dischargeBot}
       />
     </div>
   );
