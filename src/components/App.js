@@ -8,7 +8,7 @@ function App() {
   const [army, setArmy] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/bots")
+    fetch("https://api.jsonbin.io/v3/b/645065849d312622a355b45b")
       .then((response) => response.json())
       .then((bots) => setBots(bots));
   }, []);
