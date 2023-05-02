@@ -8,7 +8,7 @@ function App() {
   const [army, setArmy] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.jsonbin.io/v3/b/645065849d312622a355b45b")
+    fetch("http://localhost:3000/bots")
       .then((response) => response.json())
       .then((bots) => setBots(bots));
   }, []);
@@ -24,7 +24,7 @@ function App() {
   };
 
   const dischargeBot = (bot) => {
-    fetch(`https://api.jsonbin.io/v3/b/645065849d312622a355b45b/${bot.id}`, {
+    fetch(`http://localhost:3000/bots/${bot.id}`, {
       method: "DELETE",
     })
       .then(() => {
